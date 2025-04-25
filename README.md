@@ -27,7 +27,6 @@
 |          | SO (MISO)    | 35               | GPIO19           |
 +----------+--------------+------------------+------------------+
 ```
-> ⚠️ Only use 3.3V, **do not connect to 5V!**
 
 ---
 
@@ -36,7 +35,7 @@
 ### 1. Install
 
 ```bash
-git clone https://github.com/your-username/max6675-temp-sensor-py.git
+git clone https://github.com/maido-39/max6675-temp-sensor-py.git
 cd max6675-temp-sensor-py
 ```
 
@@ -54,7 +53,7 @@ python3 example.py
 from max6675_sensor_lib import MAX6675
 import time
 
-sensor = MAX6675(CS=24, SCK=23, SO=21, unit=1)  # BOARD pins
+sensor = MAX6675(CS=35, SCK=40, SO=36, unit=1)  # BOARD pins
 
 while True:
     temp = sensor.read_temp()
